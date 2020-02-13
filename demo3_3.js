@@ -4,6 +4,7 @@ const matriz = [
   [7,8,9],
 ];
 
+console.log(matriz[0][1]);
 console.log(matriz[0][2]);
 
 const numbers = [];
@@ -14,9 +15,10 @@ matriz.forEach(array => {
   })
 });
 
-const rta = matriz.reduce((arrayTotal, array) => {
-  return [...arrayTotal, ...array];
-}, []);
-
 console.log(numbers);
+
+const rta = matriz.reduce((arrayTotal,current) => {
+  return [...arrayTotal, ...current];
+}, [])
+
 console.log(rta);

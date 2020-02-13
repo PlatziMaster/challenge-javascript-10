@@ -2,19 +2,20 @@ const axios = require("axios");
 
 const API = 'https://jsonplaceholder.typicode.com';
 
-const fetchUsers = async () => {
-  const usersIds = [1,2,3,4,5]
+const callUsers = async (usersIds) => {
 
-  const promises = usersIds
-  .map(userId => axios.get(`${API}/users/${userId}/todos?_limit=2`))
+  const promises = usersIds.map(userId => {
+    return axios.get(`${API}/todos?userId=${userId}`);
+  });
 
   const rta = (await Promise.all(promises))
   .map(response => response.data)
-  .reduce((totalArray, value) => {
-    return [...totalArray, ...value];
+  .reduce((arrayTotal, array) => {
+    return [...arrayTotal, ...array];
   }, []);
-
   console.log(rta);
+  console.log(rta.length);
 };
 
-fetchUsers();
+
+callUsers([1,2,4,5]);

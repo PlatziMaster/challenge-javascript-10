@@ -1,23 +1,23 @@
 const faker = require('faker');
 
-const exams = [];
+const data = [];
 
-for (let index = 0; index < 1000; index++) {
-  exams.push({
-    name: faker.name.findName(),
-    rate: faker.random.number(6),
+for (let index = 0; index < 3000; index++) {
+  data.push({
+    name: faker.name.firstName(),
+    rate: faker.random.number(6)
   });
 }
 
-const rta = exams
-.map(exam => exam.rate)
-.reduce((result, rate) => {
-  if (result[rate]) {
-    result[rate] += 1;
+const rta = data
+.map(item => item.rate)
+.reduce((dict, rate) => {
+  if (dict[rate]) {
+    dict[rate] += 1;
   } else {
-    result[rate] = 1;
+    dict[rate] = 1;
   }
-  return result;
+  return dict;
 }, {});
 
 console.log(rta);
