@@ -11,6 +11,7 @@ Usando la función `reduce` debes buscar el número más pequeño y el más gran
 1. Editar el archivo demo6.js
 1. Usando reduce encontrar el numero más pequeño.
 1. Usando reduce encontrar el numero más grande.
+1. Obtener el promedio de un array.
 1. Plus: Crear un array de 1000 números fake generados por la librería `faker` y probar las funciones.
 
 ## Ejemplo
@@ -19,6 +20,7 @@ La solución debería funcionar algo similar:
 ```js
 getMaxNumber([2,4,5,6, ...]) // should === 6
 getMinNumber([2,4,5,6, ...]) // should === 2
+getAverage([10, 10, 10]) // should === 10
 ```
 
 ### Instalación
