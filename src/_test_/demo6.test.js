@@ -1,3 +1,4 @@
+
 const { getMaxNumber, getMinNumber, getAverage } = require ('../demo6');
 
 describe('getMaxNumber', () => {
@@ -23,9 +24,9 @@ describe('getMinNumber', () => {
 describe('getAverage', () => {
 
   it('should return the average', () => {
-    expect(getMaxNumber([10, 10, 10])).toBe(10);
-    expect(getMaxNumber([1,2,3,4,5,6,7,8,9,10])).toBe(5.5);
-    expect(getMaxNumber([10,20,30])).toBe(20);
+    expect(getAverage([10, 10, 10])).toBe(10);
+    expect(getAverage([1,2,3,4,5,6,7,8,9,10])).toBe(5.5);
+    expect(getAverage([10,20,30])).toBe(20);
   });
 
 });
