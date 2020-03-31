@@ -2,9 +2,9 @@
 
 Los Arrays en Javascript soportan la función `reduce`, esta puede evaluar cada elemento y reducirlo a un solo valor.
 
-Usando la función `reduce` debes buscar el número más pequeño y el más grande.
-
 # RETO 1
+
+Usando la función `reduce` debes buscar el número más pequeño y el más grande.
 
 ## Pasos
 
