@@ -1,4 +1,5 @@
 const { getMaxNumber, getMinNumber, getAverage } = require ('../demo6');
+const faker = require('faker');
 
 describe('getMaxNumber', () => {
 
@@ -8,6 +9,12 @@ describe('getMaxNumber', () => {
     expect(getMaxNumber([1,2,3,4,5,-66,8,9,0,34])).toBe(34);
   });
 
+  it('should return max number from 100 faker elements', () => {
+    const fakerArray = new Array(1000).fill(null).map(() =>  faker.random.number());
+    const number = getMaxNumber(fakerArray);
+    console.log(number);
+    expect(number).toBeTruthy();
+  });
 });
 
 describe('getMinNumber', () => {
@@ -18,6 +25,13 @@ describe('getMinNumber', () => {
     expect(getMinNumber([1,2,3,4,5,-66,8,9,0,34])).toBe(-66);
   });
 
+  it('should return min number from 100 faker elements', () => {
+    const fakerArray = new Array(1000).fill(null).map(() =>  faker.random.number());
+    const number = getMinNumber(fakerArray);
+    console.log(number);
+    expect(number).toBeTruthy();
+  });
+
 });
 
 describe('getAverage', () => {
@@ -26,6 +40,13 @@ describe('getAverage', () => {
     expect(getAverage([10, 10, 10])).toBe(10);
     expect(getAverage([1,2,3,4,5,6,7,8,9,10])).toBe(5.5);
     expect(getAverage([10,20,30])).toBe(20);
+  });
+
+  it('should return average number from 100 faker elements', () => {
+    const fakerArray = new Array(1000).fill(null).map(() =>  faker.random.number());
+    const number = getAverage(fakerArray);
+    console.log(number);
+    expect(number).toBeTruthy();
   });
 
 });
