@@ -23,7 +23,7 @@ const faker = require('faker')
 
 let testData = [];
 
-for (let i = 0; i < 10; i++)
+for (let i = 0; i < 1000; i++)
   testData.push(faker.random.number());
 
 console.log('Generated array:');
