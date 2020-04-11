@@ -3,24 +3,19 @@ const faker = require('faker');
 const numbersArray = [];
 
 for (let index = 0; index < 1000; index++) {
-  numbersArray.push({
-    number: faker.random.number(1000),
-  });
+  numbersArray.push(faker.random.number(1000));
 }
 
-const getMaxNumber = numbersArray => {
+const getMaxNumber = (numbersArray) => {
   return numbersArray.reduce((num, value) => (value > num ? value : num));
 };
 
-const getMinNumber = numbersArray => {
+const getMinNumber = (numbersArray) => {
   return numbersArray.reduce((num, value) => (value < num ? value : num));
 };
 
-const getAverage = numbersArray => {
-  return numbersArray.reduce(
-    (sum, value) => sum + value / numbersArray.length,
-    0,
-  );
+const getAverage = (numbersArray) => {
+  return numbersArray.reduce((sum, value) => sum + value) / numbersArray.length;
 };
 
 module.exports = { getMaxNumber, getMinNumber, getAverage };
