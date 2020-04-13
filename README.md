@@ -9,10 +9,10 @@ Usando la función `reduce` debes buscar el número más pequeño y el más gran
 ## Pasos
 
 1. Editar el archivo demo6.js
-1. Usando reduce encontrar el numero más pequeño.
-1. Usando reduce encontrar el numero más grande.
-1. Obtener el promedio de un array.
-1. Plus: Crear un array de 1000 números fake generados por la librería `faker` y probar las funciones.
+2. Usando reduce encontrar el numero más pequeño.
+3. Usando reduce encontrar el numero más grande.
+4. Obtener el promedio de un array.
+5. Plus: Crear un array de 1000 números fake generados por la librería `faker` y probar las funciones.
 
 ## Ejemplo
 La solución debería funcionar algo similar:
