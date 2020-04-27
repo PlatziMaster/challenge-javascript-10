@@ -1,17 +1,13 @@
-const getMaxNumber = (numbersArray) => numbersArray.reduce((maximum, number) => {
-  if (number > maximum)
-    maximum = number;
-  return maximum;
-}, Number.MIN_VALUE);
+const getMaxNumber = (numbersArray) => numbersArray.reduce(
+  (maximum, number) => number > maximum ? number : maximum
+  );
 
-const getMinNumber = (numbersArray) => numbersArray.reduce((minimum, number) => {
-  if (number < minimum)
-    minimum = number;
-  return minimum;
-}, Number.MAX_VALUE);
+const getMinNumber = (numbersArray) => numbersArray.reduce(
+  (minimum, number) => number < minimum ? number : minimum
+  );
 
 const getAverage = (numbersArray) => {
-  const total = numbersArray.reduce((total, number) => total + number, 0);
+  const total = numbersArray.reduce((total, number) => total + number);
   return total/numbersArray.length;
 }
 
