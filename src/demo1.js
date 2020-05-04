@@ -12,5 +12,10 @@ for (let index = 0; index < 1000; index++) {
 
 const rta = orders
 .map(order => order.price)
-.reduce((count, value) => count + value, 0);
+.reduce((count, value) => {
+  console.log(`count=${count}`);
+  console.log(`value=${value}`);  
+  const retorno = count + value;
+  return retorno;
+}, 0);
 console.log(rta);
