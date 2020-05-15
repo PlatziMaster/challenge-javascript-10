@@ -1,5 +1,5 @@
 const getMaxNumber = (numbersArray) => {
-  return numbersArray.reduce((min, value) => Math.max(min, value));
+  return numbersArray.reduce((max, value) => Math.max(max, value));
 };
 
 const getMinNumber = (numbersArray) => {
