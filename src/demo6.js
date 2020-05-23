@@ -1,13 +1,10 @@
-const getMaxNumber = (numbersArray) => {
-  // your code here
-}
+const maxAcum = (accumulator, currentValue) => accumulator >= currentValue ? accumulator : currentValue;
+const getMaxNumber = (numbersArray) => numbersArray.reduce(maxAcum)
 
-const getMinNumber = (numbersArray) => {
-  // your code here
-}
+const lessAcum = (accumulator, currentValue) => accumulator <= currentValue ? accumulator : currentValue;
+const getMinNumber = (numbersArray) => numbersArray.reduce(lessAcum)
 
-const getAverage = (numbersArray) => {
-  // your code here
-}
+const sum = (accumulator, currentValue) => accumulator + currentValue;
+const getAverage = (numbersArray) => numbersArray.reduce(sum) / numbersArray.length
 
 module.exports = { getMaxNumber, getMinNumber, getAverage };
