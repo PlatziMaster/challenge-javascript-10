@@ -1,9 +1,17 @@
+// const numbers = [1,3,5,7];
+
+// const rta = numbers.reduce((count, item) => {
+//   return count + item;
+// }, 0);
+
+// console.log(rta);
+
 const tasks = [
   {
     id: 1343,
     title: 'Fix issue 423',
     duration: 60,
-    completed: false,
+    completed: true,
   },
   {
     id: 2454,
@@ -33,15 +41,7 @@ const rta = tasks
   };
 })
 .filter(task => task.completed)
-.map(task => task.durationInHours)
-.reduce((count, value) => {
-  return count + value;
-}, 0);
+.map(item => item.durationInHours)
+.reduce((count, item) => count + item, 0);
 
 console.log(rta);
-
-const rta2 = [1,2,3,5,1,3,3,3,2,323,23,23,2].reduce((count, value) => {
-  return count + value;
-}, 0);
-
-console.log(rta2);

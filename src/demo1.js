@@ -1,16 +1,13 @@
 const faker = require('faker');
 
-const orders = [];
-for (let index = 0; index < 1000; index++) {
-  orders.push({
+const users = [];
+
+for (let index = 0; index < 50; index++) {
+  users.push({
+    id: faker.random.uuid(),
     name: faker.name.findName(),
-    zipCode: faker.address.zipCode(),
-    product: faker.commerce.productName(),
-    price: parseInt(faker.commerce.price(), 10),
+    lastName: faker.name.lastName(),
   });
 }
 
-const rta = orders
-.map(order => order.price)
-.reduce((count, value) => count + value, 0);
-console.log(rta);
+console.log(users);
