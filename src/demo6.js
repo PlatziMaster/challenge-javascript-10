@@ -1,9 +1,17 @@
 const getMaxNumber = (numbersArray) => {
-  return numbersArray.reduce((anterior, actual) => Math.max(anterior, actual))
+  return numbersArray.reduce((anterior, actual) => {
+    let result = anterior
+    if(actual > anterior) result = actual
+    return result
+  }, 0)
 }
 
 const getMinNumber = (numbersArray) => {
-  return numbersArray.reduce((anterior, actual) => Math.min(anterior, actual))
+  return numbersArray.reduce((anterior, actual) => {
+    let result = anterior
+    if(actual < anterior) result = actual
+    return result
+  }, 1)
 }
 
 const getAverage = (numbersArray) => {
