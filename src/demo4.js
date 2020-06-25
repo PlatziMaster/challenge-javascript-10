@@ -23,11 +23,14 @@ const generateTasks = (userId) => {
 }
 
 const getTodos = async (usersIds) => {
-  const promises = usersIds.map(userId => generateTasks(userId));
+  const promises = usersIds
+  .map(id => axios.get(`${API}/todos?userId=${id}`));
   return (await Promise.all(promises))
-  .reduce((rta, item) => {
-    return [...rta, ...item];
-  }, []);
+  .map(response => response.data)
+  .flat();
 }
 
-getTodos([1,4]).then(rta => console.log(rta));
+getTodos([3,5])
+.then(rta => {
+  console.log(rta);
+});
