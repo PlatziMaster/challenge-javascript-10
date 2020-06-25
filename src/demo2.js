@@ -12,9 +12,9 @@ for (let index = 0; index < 1000; index++) {
 const rta = exams
 .map(exam => exam.rate)
 .reduce((result, value) => {
-  if (result[value]) {
+  if (result[value]) { // si existe
     result[value] = result[value] + 1;
-  } else {
+  } else { // no existe
     result[value] = 1;
   }
   return result;

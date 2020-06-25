@@ -12,5 +12,6 @@ for (let index = 0; index < 1000; index++) {
 
 const rta = orders
 .map(order => order.price)
+.filter(item => item > 500)
 .reduce((count, value) => count + value, 0);
 console.log(rta);
