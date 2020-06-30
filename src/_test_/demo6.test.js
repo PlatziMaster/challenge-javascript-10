@@ -1,3 +1,4 @@
+
 const { getMaxNumber, getMinNumber, getAverage } = require ('../demo6');
 
 describe('getMaxNumber', () => {
