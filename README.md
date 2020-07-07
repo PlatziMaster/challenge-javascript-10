@@ -1,4 +1,6 @@
 # class-03 - JavaScript Reduce
+![](https://raw.githubusercontent.com/Angelozam17/challenge-javascript-10/master/src/assets/test.png)
+
 
 Los Arrays en Javascript soportan la función `reduce`, esta puede evaluar cada elemento y reducirlo a un solo valor.
 
