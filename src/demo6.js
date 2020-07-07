@@ -1,13 +1,15 @@
 const getMaxNumber = (numbersArray) => {
-  return Math.max(...numbersArray)
+  h= numbersArray.reduce((acc, curr)=> Math.max(acc,curr))
+  return h
 }
 
 const getMinNumber = (numbersArray) => {
-  return Math.min(...numbersArray)
+  h= numbersArray.reduce((acc, curr)=> Math.min(acc,curr))
+  return h
 }
 
 const getAverage = (numbersArray) => {
-  const reducer = (accumulator, currentValue) => accumulator + currentValue;
+  const reducer = (acc, curr) => (acc+curr);
   var h= numbersArray.reduce(reducer)/numbersArray.length
   return h
 }
