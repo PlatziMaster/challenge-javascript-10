@@ -1,4 +1,5 @@
 const { getMaxNumber, getMinNumber, getAverage } = require ('../demo6');
+const faker = require('faker');
 
 describe('getMaxNumber', () => {
 
