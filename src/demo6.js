@@ -1,13 +1,26 @@
 const getMaxNumber = (numbersArray) => {
-  // your code here
+  return numbersArray.reduce((rta, item) => {
+    if (item > rta) {
+      rta = item
+    }
+    return rta
+  }, 0)
 }
 
 const getMinNumber = (numbersArray) => {
-  // your code here
+  return numbersArray.reduce((rta, item) => {
+    if (item < rta) {
+      rta = item
+    }
+    return rta
+  }, getMaxNumber(numbersArray))
 }
 
 const getAverage = (numbersArray) => {
-  // your code here
+  let sum = numbersArray.reduce((count, item) => {
+    return (count + item)
+  }, 0)
+  return sum / numbersArray.length
 }
 
 module.exports = { getMaxNumber, getMinNumber, getAverage };
