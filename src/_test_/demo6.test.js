@@ -1,4 +1,4 @@
-const { getMaxNumber, getMinNumber, getAverage } = require ('../demo6');
+const { getMaxNumber, getMinNumber, getAverage, randomNumbersArray } = require ('../demo6');
 
 describe('getMaxNumber', () => {
 
@@ -29,3 +29,7 @@ describe('getAverage', () => {
   });
 
 });
+
+console.log(`Número mayor: ${getMaxNumber(randomNumbersArray)}`);
+console.log(`Número menor: ${getMinNumber(randomNumbersArray)}`);
+console.log(`Promedio: ${getAverage(randomNumbersArray)}`);
