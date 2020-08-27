@@ -1,11 +1,13 @@
 
 
+
+
 let numbersArray = [ 2, 4, 6, 8];
 
 
 const getMaxNumber = (numbersArray) => {
-  return numberMaximo = numbersArray.reduce((max, number) => {
-    if (max, number){
+  return numberMax = numbersArray.reduce((max, number) => {
+    if (max < number){
       max = number
     }
     return max
@@ -13,8 +15,8 @@ const getMaxNumber = (numbersArray) => {
 }
 
 const getMinNumber = (numbersArray) => {
-  return numbersArray.reduce((min, number) => {
-    if (min, number){
+  return numberMin = numbersArray.reduce((min, number) => {
+    if (min > number){
       min = number
     }
     return min
@@ -27,11 +29,18 @@ const getAverage = (numbersArray) => {
     return average + number
   });
   let average = suma / numbersArray.length
-  return average
+  return promedio =  average
 }
 
 getMaxNumber(numbersArray);
-console.log(numberMaximo)
+console.log(numberMax)
+
+
+getMinNumber(numbersArray);
+console.log(numberMin)
+
+getAverage(numbersArray);
+console.log(promedio)
 
 
 module.exports = { getMaxNumber, getMinNumber, getAverage };
