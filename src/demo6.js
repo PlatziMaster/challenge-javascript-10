@@ -12,3 +12,15 @@ const getAverage = (numbersArray) => {
 }
 
 module.exports = { getMaxNumber, getMinNumber, getAverage };
+
+//Paso 5 Faker
+const faker = require('faker');
+const arr = [];
+const fake = (arr, howMany) => {
+  for(let i = 0; i <= howMany; i++) {
+    let newNum = faker.random.number();
+    arr.push(newNum)
+  }
+}
+fake(arr, 1000);
+console.log(arr);
