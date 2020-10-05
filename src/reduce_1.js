@@ -1,3 +1,5 @@
+'use strict'
+
 const tasks = [
   {
     id: 1343,
