@@ -3,29 +3,32 @@
 const faker = require('faker')
 
 const averageArray = (numbersArray) => () => {
-  let suma = 0
-  const lengthSum = numbersArray.map(current => suma = suma + current)
-  return suma / lengthSum.length
+  const sum = (accumulator, current) => current + accumulator
+  return numbersArray.reduce(sum) / numbersArray.length
 }
 
 const maxNumber = numbersArray => () => {
-  let max = 0
-  numbersArray.map(current => {
-    if (current > max) {
-      max = current
+  const accumulator = 0
+  const max = (accumulator, current) => {
+    if (current > accumulator) {
+      return accumulator = current
+    } else {
+      return accumulator
     }
-  })
-  return max
+  }
+  return numbersArray.reduce(max, accumulator)
 }
 
 const minNumber = numbersArray => () => {
   let min = getMaxNumber(numbersArray)
-  numbersArray.map(current => {
-    if (current < min) {
-      min = current
+  const max = (accumulator, current) => {
+    if (current < accumulator) {
+      return accumulator = current
+    } else {
+      return accumulator
     }
-  })
-  return min
+  }
+  return numbersArray.reduce(max, min)
 }
 
 const getMaxNumber = (numbersArray) => {
@@ -44,8 +47,8 @@ const getAverage = (numbersArray) => {
 }
 
 const arraysNumber = () => () => {
-  const totalNumbers = 1000
   let arrayNumbers = []
+  const totalNumbers = 1000
   for (let i = 0; i < totalNumbers; i++) {
     arrayNumbers = arrayNumbers.concat(faker.random.number())
   }
