@@ -1,3 +1,5 @@
+'use strict'
+
 // const numbers = [1,3,5,7];
 
 // const rta = numbers.reduce((count, item) => {
